@@ -7,3 +7,8 @@
 (prelude-require-package 'ccls)
 
 (setq ccls-executable "/usr/local/bin/ccls")
+
+(defun disable-guru-mode ()
+  (guru-mode -1))
+
+(add-hook 'prelude-prog-mode-hook 'disable-guru-mode t)
